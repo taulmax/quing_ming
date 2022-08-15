@@ -1,12 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quing Ming's Web Programming</title>
-  </head>
-  <body>
-    <h1>Quing Ming의 동적 웹 프로그램잉!</h1>
-  </body>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/move.js"></script>
+    <script src="./js/terminal.js"></script>
+</head>
+
+<body>
+    <!-- Home Page -->
+    <div id="home">
+        <h1 class="greeting">Quing Ming의 동적 웹 프로그램잉!</h1>
+        <button class="start_btn" onclick="moveTo('home', 'selectPage');">GAME START</button>
+    </div>
+
+    <!-- Select Page -->
+    <div id="selectPage">
+        <div class="select_wrapper">
+            <div class="game_box" onclick="moveTo('selectPage', 'terminalPage'); focusMyLog();">Terminal</div>
+            <div class="game_box">맥북 강화하기</div>
+            <div class="game_box">캐치마인드</div>
+        </div>
+    </div>
+
+    <!-- Terminal Page -->
+    <div id="terminalPage">
+        <div class="terminal_wrapper">
+            <div class="terminal_info">% Welcome to BY#Log terminal! %</div>
+            <div class="terminal_info">-------------------------------</div>
+            <div class="terminal_info">COMMANDS</div>
+            <div class="command_prompt">whoami</div>
+            <div class="command_prompt">pwd</div>
+            <div class="command_prompt">ls</div>
+            <div class="command_prompt">cd</div>
+            <div class="command_prompt">clear</div>
+            <div class="command_prompt">exit</div>
+            <div class="terminal_info">-------------------------------</div>
+            <div class="current_log">
+                <span class="this_is_me">BY#log:~$</span>
+                <input type="text" id="first_terminal_input" class="terminal_input" onkeyup="onKeyUpTerminalInput();"
+                    autofocus>
+            </div>
+        </div>
+    </div>
+</body>
+
 </html>

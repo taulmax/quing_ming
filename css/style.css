@@ -1,0 +1,85 @@
+@import "./reset.css";
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background-color: rgb(170, 131, 202);
+}
+
+/* Home Page CSS */
+#home {
+    width: 100%;
+    height: 100%;
+}
+
+.greeting {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 68px;
+}
+
+.start_btn {
+    position: absolute;
+    left: 50%;
+    top: 80%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 150px;
+    font-size: 32px;
+    cursor: pointer;
+}
+
+/* Select Page CSS */
+#selectPage {
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.select_wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.select_wrapper .game_box {
+    margin: 0px 100px;
+    border: 1px solid black;
+    width: 400px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    cursor: pointer;
+    background-color: rgb(162, 246, 195);
+}
+
+/* Terminal Page CSS */
+#terminalPage {
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.terminal_wrapper {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 1200px;
+    height: 100%;
+    max-height: 720px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    background-color: blanchedalmond;
+}
