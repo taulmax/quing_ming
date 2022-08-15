@@ -85,6 +85,7 @@ const onKeyUpTerminalInput = () => {
         terminalWrapper.removeChild(pastLog);
       }
       moveTo("terminalPage", "home");
+    } else if (value === "") {
     } else {
       const noCommandLog = document.createElement("div");
       const command = document.createElement("span");
