@@ -43,13 +43,13 @@ const onKeyUpTerminalInput = () => {
       const ls = document.createElement("span");
 
       newLsLog.classList.add("past_log");
-      ls.innerHTML = "/home /terminal /upgrade  /sketch";
+      ls.innerHTML = "/home /terminal /apple  /sketch";
       newLsLog.appendChild(ls);
 
       terminalWrapper.appendChild(newLsLog);
     } else if (value.split(" ")[0] === "cd") {
       const path = value.split(" ")[1];
-      const pathArray = ["home", "terminal", "upgrade", "sketch"];
+      const pathArray = ["home", "terminal", "apple", "sketch"];
       if (pathArray.includes(path)) {
         const pastLogs = document.querySelectorAll(".past_log");
         for (let pastLog of pastLogs) {
@@ -57,8 +57,9 @@ const onKeyUpTerminalInput = () => {
         }
         if (path === "terminal") {
           moveTo("terminalPage", "terminalPage");
-        } else if (path === "upgrade") {
-          moveTo("terminalPage", "upgradePage");
+        } else if (path === "apple") {
+          moveTo("terminalPage", "appleStoreGamePage");
+          setInitGameData();
         } else if (path === "sketch") {
           moveTo("terminalPage", "sketchPage");
         } else if (path === "home") {

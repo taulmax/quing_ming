@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./css/style.css">
     <script src="./js/move.js"></script>
     <script src="./js/terminal.js"></script>
+    <script src="./js/apple.js"></script>
 </head>
 
 <body>
@@ -22,7 +23,7 @@
     <div id="selectPage">
         <div class="select_wrapper">
             <div class="game_box" onclick="moveTo('selectPage', 'terminalPage'); focusMyLog();">Terminal</div>
-            <div class="game_box">맥북 강화하기</div>
+            <div class="game_box" onclick="moveTo('selectPage', 'appleStoreGamePage'); setInitGameData();">애플 강화하기</div>
             <div class="game_box">캐치마인드</div>
         </div>
     </div>
@@ -45,6 +46,29 @@
                 <input type="text" id="first_terminal_input" class="terminal_input" onkeyup="onKeyUpTerminalInput();"
                     autofocus>
             </div>
+        </div>
+    </div>
+
+    <!-- Apple Store Game -->
+    <div id="appleStoreGamePage">
+        <div class="apple_store_game_wrapper">
+            <header class="game_header">
+                <div id="current_money" class="current_money"></div>
+            </header>
+            <div class="apple_store_game_content">
+                <div id="current_item" class="item"></div>
+                <div id="cost"></div>
+                <div class="percentage_wrapper">
+                    <span id="current_success" class="success"></span>
+                    <span id="current_degration" class="degration"></span>
+                    <span id="current_destruction" class="destruction"></span>
+                </div>
+            </div>
+            <footer class="button_wrapper">
+                <button class="gain_money" onclick="gainMoney();">돈벌기</button>
+                <button class="enhance" onclick="enhance();">강화하기</button>
+            </footer>
+            <div id="enhance_result"></div>
         </div>
     </div>
 </body>

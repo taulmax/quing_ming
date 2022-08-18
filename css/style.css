@@ -83,3 +83,10 @@ body {
     overflow-y: auto;
     background-color: blanchedalmond;
 }
+
+/* Apple Store Game Page CSS */
+#appleStoreGamePage,
+.apple_store_game_wrapper {
+    width: 100%;
+    height: 100%;
+}
