@@ -1,6 +1,6 @@
 // 초기 게임 데이터
 let initGameData = {
-  money: 300000,
+  money: 0,
   item: "iPhone",
   stage: 1,
 };
