@@ -84,6 +84,7 @@ const setInitGameData = () => {
   currentGameData = { ...initGameData };
   currentMoney.innerHTML = initGameData.money;
   showInfo(currentGameData.item);
+  document.getElementById("enhance_result").innerHTML = "";
 };
 
 // 돈 벌기 클릭
