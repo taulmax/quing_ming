@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Acme&family=Jua&display=swap" rel="stylesheet">
     <script src="./js/move.js"></script>
     <script src="./js/terminal.js"></script>
     <script src="./js/apple.js"></script>
@@ -57,24 +57,32 @@
 
     <!-- Apple Store Game -->
     <div id="appleStoreGamePage">
+        <header id="logo" onclick="setInitGameData(); moveTo('appleStoreGamePage', 'home');">BY SPACE</header>
+        <div id="cheat" onclick="cheat();"></div>
         <div class="apple_store_game_wrapper">
-            <header class="game_header">
+            <header onclick="gainMoney();" class="game_header">
+                <div class="coin_image"></div>
                 <div id="current_money" class="current_money"></div>
             </header>
             <div class="apple_store_game_content">
-                <div id="current_item" class="item"></div>
-                <div id="cost"></div>
-                <div class="percentage_wrapper">
-                    <span id="current_success" class="success"></span>
-                    <span id="current_degration" class="degration"></span>
-                    <span id="current_destruction" class="destruction"></span>
+                <div class="content_top_wrapper">
+                    <div id="item_image" class="item_image appleWatch"></div>
+                    <div class="wrapper_without_image">
+                        <div id="current_item" class="item"></div>
+                        <div class="percentage_wrapper">
+                            <span id="current_success" class="success"></span>
+                            <span id="current_degration" class="degration"></span>
+                            <span id="current_destruction" class="destruction"></span>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <footer class="button_wrapper">
-                <button class="gain_money" onclick="gainMoney();">돈벌기</button>
+                <div class="cost_wrapper">
+                    <div class="coin_image"></div>
+                    <div id="cost"></div>
+                </div>
+                <div id="enhance_result"></div>
                 <button class="enhance" onclick="enhance();">강화하기</button>
-            </footer>
-            <div id="enhance_result"></div>
+            </div>
         </div>
     </div>
 </body>

@@ -11,6 +11,14 @@ body {
     background-image: url(../img/space.png);
 }
 
+::selection {
+    background: transparent;
+}
+
+::-moz-selection {
+    background: transparent;
+}
+
 /* Home Page CSS */
 #home {
     width: 100%;
@@ -148,7 +156,203 @@ body {
     display: none;
 }
 
+#cheat {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 30px;
+    height: 30px;
+}
+
 .apple_store_game_wrapper {
     width: 100%;
     height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game_header {
+    font-family: 'Acme', sans-serif;
+    color: rgb(247, 247, 247);
+    font-size: 50px;
+    cursor: pointer;
+    position: absolute;
+    right: 25px;
+    top: 25px;
+    display: flex;
+}
+
+.game_header:active {
+    font-size: 46px;
+    line-height: 50px;
+}
+
+.game_header .coin_image {
+    background-image: url(../img/coin.png);
+    background-repeat: no-repeat;
+    background-size: 82%;
+    background-position: 10px 5px;
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.game_header #current_money {
+    caret-color: transparent;
+}
+
+.apple_store_game_content {
+    width: 900px;
+    height: 500px;
+    padding: 60px 100px 60px 80px;
+    background-color: rgba(82, 47, 141, 0.8);
+    border-color: rgb(82 47 141);
+    -webkit-box-shadow: 5px 5px 15px -2px #141414;
+    box-shadow: 5px 5px 15px -2px #141414;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+.apple_store_game_content .content_top_wrapper {
+    width: 100%;
+    height: 280px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.apple_store_game_content .content_top_wrapper .item_image {
+    width: 280px;
+    height: 100%;
+}
+
+.item_image.appleWatch {
+    background-image: url(../img/apple_watch.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0px -50px;
+}
+
+.item_image.iPhone {
+    background-image: url(../img/iphone.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0px -27px;
+}
+
+.item_image.iPad {
+    background-image: url(../img/ipad.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: -57px 0px;
+}
+
+.item_image.macBookAir {
+    background-image: url(../img/macbook_air.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0px 0px;
+}
+
+.item_image.macBookPro {
+    background-image: url(../img/macbook_pro.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: 0px 42px;
+}
+
+.item_image.macPro {
+    background-image: url(../img/mac_pro.png);
+    background-repeat: no-repeat;
+    background-size: 116%;
+    background-position: -20px 14px;
+}
+
+.wrapper_without_image {
+    font-family: 'Jua', sans-serif;
+    width: calc(100% - 280px);
+    height: 100%;
+    color: white;
+    margin-left: 30px;
+}
+
+.wrapper_without_image .item {
+    height: 50px;
+    font-size: 48px;
+}
+
+.wrapper_without_image .percentage_wrapper {
+    display: flex;
+    flex-direction: column;
+    font-size: 30px;
+    height: calc(100% - 50px);
+    justify-content: center;
+}
+
+.wrapper_without_image .percentage_wrapper span {
+    margin: 6px 0px;
+}
+
+.cost_wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cost_wrapper .coin_image {
+    background-image: url(../img/coin.png);
+    background-repeat: no-repeat;
+    background-size: 82%;
+    background-position: 10px 5px;
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+#cost {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Acme', sans-serif;
+    color: rgb(247, 247, 247);
+    font-size: 50px;
+}
+
+.enhance {
+    font-family: 'Jua', sans-serif;
+    position: absolute;
+    bottom: -120px;
+    left: 0;
+    width: 900px;
+    height: 100px;
+    background-color: rgb(255 206 0 / 80%);
+    border-color: rgb(255 206 0);
+    -webkit-box-shadow: 5px 5px 15px -2px #141414;
+    box-shadow: 5px 5px 15px -2px #141414;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 50px;
+    color: rgb(247, 247, 247);
+}
+
+.enhance:active {
+    transform: scale(99%, 99%);
+}
+
+#enhance_result {
+    font-family: 'Jua', sans-serif;
+    position: absolute;
+    top: -75px;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 80px;
+    color: rgb(247, 247, 247);
 }
