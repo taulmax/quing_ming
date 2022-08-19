@@ -3,6 +3,15 @@ const focusMyLog = () => {
   document.querySelector(".terminal_input").focus();
 };
 
+// 히스토리 지우기
+const deleteTerminal = () => {
+  const terminalWrapper = document.querySelector(".terminal_wrapper");
+  const pastLogs = document.querySelectorAll(".past_log");
+  for (let pastLog of pastLogs) {
+    terminalWrapper.removeChild(pastLog);
+  }
+};
+
 // input onKeyUp Event
 const onKeyUpTerminalInput = () => {
   const key = window.event.key;

@@ -24,15 +24,18 @@
 
     <!-- Select Page -->
     <div id="selectPage">
+        <header id="logo" onclick="moveTo('selectPage', 'home');">BY SPACE</header>
         <div class="select_wrapper">
             <div class="game_box" onclick="moveTo('selectPage', 'terminalPage'); focusMyLog();">Terminal</div>
-            <div class="game_box" onclick="moveTo('selectPage', 'appleStoreGamePage'); setInitGameData();">애플 강화하기</div>
-            <div class="game_box">캐치마인드</div>
+            <div class="game_box" onclick="moveTo('selectPage', 'appleStoreGamePage'); setInitGameData();">Apple Game
+            </div>
+            <div class="game_box">Comming Soon!</div>
         </div>
     </div>
 
     <!-- Terminal Page -->
     <div id="terminalPage">
+        <header id="logo" onclick="deleteTerminal(); moveTo('terminalPage', 'home');">BY SPACE</header>
         <div class="terminal_wrapper">
             <div class="terminal_info">% Welcome to BY#Log terminal! %</div>
             <div class="terminal_info">-------------------------------</div>

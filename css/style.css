@@ -56,6 +56,18 @@ body {
     box-shadow: 5px 5px 15px 5px #FFD200;
 }
 
+/* LOGO CSS */
+#logo {
+    font-family: 'Acme', sans-serif;
+    color: rgb(247, 247, 247);
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.8), 0 0 10px rgba(255, 255, 255, .5);
+    font-size: 50px;
+    cursor: pointer;
+    position: absolute;
+    left: 25px;
+    top: 25px;
+}
+
 /* Select Page CSS */
 #selectPage {
     width: 100%;
@@ -72,16 +84,40 @@ body {
 }
 
 .select_wrapper .game_box {
-    margin: 0px 100px;
+    font-family: 'Acme', sans-serif;
+    margin: 0px 50px;
     border: 1px solid black;
-    width: 400px;
-    height: 400px;
+    width: 350px;
+    height: 580px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 50px;
     cursor: pointer;
-    background-color: rgb(162, 246, 195);
+    background-color: rgba(82, 47, 141, 0.8);
+    border-color: rgb(82 47 141);
+    border-radius: 30px;
+    color: rgb(247, 247, 247);
+    -webkit-box-shadow: 5px 5px 15px -2px #141414;
+    box-shadow: 5px 5px 15px -2px #141414;
+    animation: game_box_dungsil 1s infinite alternate;
+    transition: all 0.2s ease-out;
+}
+
+.select_wrapper .game_box:hover {
+    background-color: rgb(247, 247, 247);
+    border-color: rgb(247, 247, 247);
+    color: rgb(82 47 141);
+}
+
+@keyframes game_box_dungsil {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(0, 10px);
+    }
 }
 
 /* Terminal Page CSS */
