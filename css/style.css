@@ -8,6 +8,7 @@ body {
 
 body {
     background-color: rgb(170, 131, 202);
+    background-image: url(../img/space.png);
 }
 
 /* Home Page CSS */
@@ -17,22 +18,42 @@ body {
 }
 
 .greeting {
+    font-family: 'Acme', sans-serif;
+    color: rgb(247, 247, 247);
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    font-size: 68px;
+    font-size: 200px;
+    animation: dungsil_dudungsil 1s infinite alternate;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.8), 0 0 10px rgba(255, 255, 255, .5);
+}
+
+@keyframes dungsil_dudungsil {
+    0% {
+        transform: translate(-50%, -45%);
+    }
+
+    100% {
+        transform: translate(-50%, -55%);
+    }
 }
 
 .start_btn {
+    font-family: 'Acme', sans-serif;
     position: absolute;
+    background: #ffff8a;
+    color: #361f00;
     left: 50%;
     top: 80%;
     transform: translate(-50%, -50%);
-    width: 500px;
-    height: 150px;
-    font-size: 32px;
+    width: 350px;
+    height: 120px;
+    font-size: 58px;
     cursor: pointer;
+    border-radius: 75%;
+    -webkit-box-shadow: 5px 5px 15px 5px #FFD200;
+    box-shadow: 5px 5px 15px 5px #FFD200;
 }
 
 /* Select Page CSS */
@@ -85,7 +106,12 @@ body {
 }
 
 /* Apple Store Game Page CSS */
-#appleStoreGamePage,
+#appleStoreGamePage {
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
 .apple_store_game_wrapper {
     width: 100%;
     height: 100%;
