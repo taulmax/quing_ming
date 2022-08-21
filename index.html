@@ -14,6 +14,7 @@
     <script src="./js/move.js"></script>
     <script src="./js/terminal.js"></script>
     <script src="./js/apple.js"></script>
+    <script src="./js/reaction.js"></script>
 </head>
 
 <body>
@@ -30,7 +31,7 @@
             <div class="game_box" onclick="moveTo('selectPage', 'terminalPage'); focusMyLog();">Terminal</div>
             <div class="game_box" onclick="moveTo('selectPage', 'appleStoreGamePage'); setInitGameData();">Apple Game
             </div>
-            <div class="game_box">Comming Soon!</div>
+            <div class="game_box" onclick="moveTo('selectPage', 'reactionPage'); setReactionInit();">Reaction Test</div>
         </div>
     </div>
 
@@ -94,6 +95,28 @@
                 </div>
                 <div id="enhance_result"></div>
                 <button class="enhance" onclick="enhance();">강화하기</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Reaction Game -->
+    <div id="reactionPage">
+        <header id="logo" onclick="setReactionInit(); moveTo('reactionPage', 'home');">BY SPACE</header>
+        <div class="reaction_wrapper">
+            <div id="start_state" class="reaction_content" onclick="startStateTest();">
+                <div class="reaction_text">Click to start!</div>
+            </div>
+            <div id="ready_state" class="reaction_content ready" onclick="readyStateTest();">
+                <div class="reaction_text">Get Ready...</div>
+            </div>
+            <div id="click_state" class="reaction_content click" onclick="clickStateTest();">
+                <div class="reaction_text">Click!!!!</div>
+            </div>
+            <div id="failure_state" class="reaction_content failure" onclick="failureStateTest();">
+                <div class="reaction_text">Failure...</div>
+            </div>
+            <div id="success_state" class="reaction_content success" onclick="successStateTest();">
+                <div id="my_time" class="reaction_text"></div>
             </div>
         </div>
     </div>
