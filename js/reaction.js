@@ -83,9 +83,15 @@ const clickStateTest = () => {
     successState.style.display = "flex";
     clickTime = new Date();
 
-    const myTimeText = document.getElementById("my_time");
+    const reactionMs = document.getElementById("reaction_ms");
     const myTime = clickTime - startTime;
-    myTimeText.innerHTML = `${myTime}ms`;
+    reactionMs.innerHTML = `${myTime}ms`;
+    const normDist = new NormalDistribution(284, 85);
+    const cdf = normDist.cdf(myTime);
+    
+    const reactionRank = document.getElementById("reaction_rank");
+    const reactionPer = document.getElementById("reaction_percentage");
+    reactionPer.innerHTML = `상위 ${Math.floor(cdf * 100)}%`;
 }
 
 const failureStateTest = () => {

@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Acme&family=Jua&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hack-font@3/build/web/hack-subset.css">
+    <script src="./js/NormalDistribution.js"></script>
     <script src="./js/move.js"></script>
     <script src="./js/terminal.js"></script>
     <script src="./js/apple.js"></script>
@@ -107,16 +108,19 @@
                 <div class="reaction_text">Click to start!</div>
             </div>
             <div id="ready_state" class="reaction_content ready" onclick="readyStateTest();">
-                <div class="reaction_text">Get Ready...</div>
+                <div class="reaction_text">준비...</div>
             </div>
             <div id="click_state" class="reaction_content click" onclick="clickStateTest();">
-                <div class="reaction_text">Click!!!!</div>
+                <div class="reaction_text">클릭!!</div>
             </div>
             <div id="failure_state" class="reaction_content failure" onclick="failureStateTest();">
-                <div class="reaction_text">Failure...</div>
+                <div class="reaction_text">너무 빨라요</div>
             </div>
             <div id="success_state" class="reaction_content success" onclick="successStateTest();">
-                <div id="my_time" class="reaction_text"></div>
+                <div id="my_time" class="reaction_text">
+                    <div id="reaction_ms"></div>
+                    <div id="reaction_percentage"></div>
+                </div>
             </div>
         </div>
     </div>

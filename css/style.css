@@ -496,10 +496,21 @@ body {
     border-color: rgb(70 163 56);
 }
 .reaction_content.failure {
-    background-color: rgb(189 36 36 / 80%);;
+    background-color: rgb(189 36 36 / 80%);
     border-color: rgb(189 36 36);
 }
 .reaction_content.success {
-    background-color: rgb(189 36 36 / 80%);;
-    border-color: rgb(189 36 36);
+    background-color: rgb(36 129 189 / 80%);
+    border-color: rgb(36 129 189);
+}
+
+#reaction_ms {
+    font-size: 180px;
+}
+#reaction_percentage {
+    font-size: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
 }
