@@ -34,7 +34,7 @@ const onKeyUpTerminalInput = () => {
       const whoIsMe = document.createElement("span");
 
       newWhoamiLog.classList.add("past_log");
-      whoIsMe.innerHTML = "My name is Quing Ming!!";
+      whoIsMe.innerHTML = "My name is Byeon Yeon!";
       newWhoamiLog.appendChild(whoIsMe);
 
       terminalWrapper.appendChild(newWhoamiLog);
@@ -43,7 +43,7 @@ const onKeyUpTerminalInput = () => {
       const pwd = document.createElement("span");
 
       newPwdLog.classList.add("past_log");
-      pwd.innerHTML = "뀡밍 깃헙깃헙";
+      pwd.innerHTML = "https://github.com/taulmax/quing_ming";
       newPwdLog.appendChild(pwd);
 
       terminalWrapper.appendChild(newPwdLog);
@@ -101,7 +101,7 @@ const onKeyUpTerminalInput = () => {
       const command = document.createElement("span");
 
       noCommandLog.classList.add("past_log");
-      command.innerHTML = "해당 명령어가 존재하지 않습니다.";
+      command.innerHTML = `'${value}'은(는) 존재하지 않는 명령어입니다.`;
       noCommandLog.appendChild(command);
 
       terminalWrapper.appendChild(noCommandLog);

@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Acme&family=Jua&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hack-font@3/build/web/hack-subset.css">
     <script src="./js/move.js"></script>
     <script src="./js/terminal.js"></script>
     <script src="./js/apple.js"></script>
@@ -36,22 +37,33 @@
     <!-- Terminal Page -->
     <div id="terminalPage">
         <header id="logo" onclick="deleteTerminal(); moveTo('terminalPage', 'home');">BY SPACE</header>
-        <div class="terminal_wrapper">
-            <div class="terminal_info">% Welcome to BY#Log terminal! %</div>
-            <div class="terminal_info">-------------------------------</div>
-            <div class="terminal_info">COMMANDS</div>
-            <div class="command_prompt">whoami</div>
-            <div class="command_prompt">pwd</div>
-            <div class="command_prompt">ls</div>
-            <div class="command_prompt">cd</div>
-            <div class="command_prompt">clear</div>
-            <div class="command_prompt">exit</div>
-            <div class="terminal_info">-------------------------------</div>
-            <div class="current_log">
-                <span class="this_is_me">BY#log:~$</span>
-                <input type="text" id="first_terminal_input" class="terminal_input" onkeyup="onKeyUpTerminalInput();"
-                    autofocus>
-            </div>
+        <div class="terminal">
+            <header class="terminal_header">
+                <div class="left_button_wrapper header_space">
+                    <div class="terminal_button red"></div>
+                    <div class="terminal_button yellow"></div>
+                    <div class="terminal_button green"></div>
+                </div>
+                <div class="terminal_title">by@MacBook-Pro: ~/Desktop/oh-my-zsh (zsh)</div>
+                <div class="header_space"></div>
+            </header>
+            <div class="terminal_wrapper">
+                <div class="terminal_info">% Welcome to BY#Log terminal! %</div>
+                <div class="terminal_info">-------------------------------</div>
+                <div class="terminal_info">COMMANDS</div>
+                <div class="command_prompt">- whoami</div>
+                <div class="command_prompt">- pwd</div>
+                <div class="command_prompt">- ls</div>
+                <div class="command_prompt">- cd</div>
+                <div class="command_prompt">- clear</div>
+                <div class="command_prompt">- exit</div>
+                <div class="terminal_info">-------------------------------</div>
+                <div class="current_log">
+                    <span class="this_is_me">BY#log:~$</span>
+                    <input type="text" id="first_terminal_input" class="terminal_input" onkeyup="onKeyUpTerminalInput();"
+                        autofocus>
+                </div>
+        </div>
         </div>
     </div>
 
