@@ -5,12 +5,18 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Quing Ming's Web Programming</title>
+    <title>BY SPACE</title>
+
+    <!-- CSS IMPORT -->
     <link rel="stylesheet" href="./css/style.css">
+
+    <!-- 폰트 -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Acme&family=Jua&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hack-font@3/build/web/hack-subset.css">
+
+    <!-- JS IMPORT -->
     <script src="./js/NormalDistribution.js"></script>
     <script src="./js/move.js"></script>
     <script src="./js/terminal.js"></script>
@@ -62,10 +68,10 @@
                 <div class="terminal_info">-------------------------------</div>
                 <div class="current_log">
                     <span class="this_is_me">BY#log:~$</span>
-                    <input type="text" id="first_terminal_input" class="terminal_input" onkeyup="onKeyUpTerminalInput();"
-                        autofocus>
+                    <input type="text" id="first_terminal_input" class="terminal_input"
+                        onkeyup="onKeyUpTerminalInput();" autofocus>
                 </div>
-        </div>
+            </div>
         </div>
     </div>
 
@@ -104,18 +110,27 @@
     <div id="reactionPage">
         <header id="logo" onclick="setReactionInit(); moveTo('reactionPage', 'home');">BY SPACE</header>
         <div class="reaction_wrapper">
+            <!-- 시작하려면 클릭해주세요 버튼 -->
             <div id="start_state" class="reaction_content" onclick="startStateTest();">
                 <div class="reaction_text">Click to start!</div>
             </div>
+
+            <!-- 준비 버튼 -->
             <div id="ready_state" class="reaction_content ready" onclick="readyStateTest();">
                 <div class="reaction_text">준비...</div>
             </div>
+
+            <!-- 클릭 버튼 -->
             <div id="click_state" class="reaction_content click" onclick="clickStateTest();">
                 <div class="reaction_text">클릭!!</div>
             </div>
+
+            <!-- 너무 빨리눌렀음 버튼 -->
             <div id="failure_state" class="reaction_content failure" onclick="failureStateTest();">
                 <div class="reaction_text">너무 빨라요</div>
             </div>
+
+            <!-- 클릭 후 결과 버튼 -->
             <div id="success_state" class="reaction_content success" onclick="successStateTest();">
                 <div id="my_time" class="reaction_text">
                     <div id="reaction_ms"></div>

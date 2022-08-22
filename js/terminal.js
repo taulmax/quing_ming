@@ -3,7 +3,7 @@ const focusMyLog = () => {
   document.querySelector(".terminal_input").focus();
 };
 
-// 히스토리 지우기
+// 히스토리 지우기 (past log 지우기)
 const deleteTerminal = () => {
   const terminalWrapper = document.querySelector(".terminal_wrapper");
   const pastLogs = document.querySelectorAll(".past_log");
@@ -16,7 +16,7 @@ const deleteTerminal = () => {
 const onKeyUpTerminalInput = () => {
   const key = window.event.key;
   if (key === "Enter") {
-    // 현재 터미널 input => span으로 변경
+    // 현재 터미널 input => span으로 변경 (current_log => past_log로 바꾸는 과정)
     const terminalWrapper = document.querySelector(".terminal_wrapper");
     const currentLog = document.querySelector(".current_log");
     const input = document.querySelector(".terminal_input");
@@ -34,7 +34,7 @@ const onKeyUpTerminalInput = () => {
       const whoIsMe = document.createElement("span");
 
       newWhoamiLog.classList.add("past_log");
-      whoIsMe.innerHTML = "My name is Byeon Yeon!";
+      whoIsMe.innerHTML = "My name is Byeong Yeon!";
       newWhoamiLog.appendChild(whoIsMe);
 
       terminalWrapper.appendChild(newWhoamiLog);
@@ -52,7 +52,7 @@ const onKeyUpTerminalInput = () => {
       const ls = document.createElement("span");
 
       newLsLog.classList.add("past_log");
-      ls.innerHTML = "/home /terminal /apple  /reaction";
+      ls.innerHTML = "/home /terminal /apple /reaction";
       newLsLog.appendChild(ls);
 
       terminalWrapper.appendChild(newLsLog);
@@ -60,18 +60,20 @@ const onKeyUpTerminalInput = () => {
       const path = value.split(" ")[1];
       const pathArray = ["home", "terminal", "apple", "reaction"];
       if (pathArray.includes(path)) {
+        // PAST_LOG 다 삭제 (어차피 화면 바뀔거라 초기화 되어야 해서)
         const pastLogs = document.querySelectorAll(".past_log");
         for (let pastLog of pastLogs) {
           terminalWrapper.removeChild(pastLog);
         }
+
         if (path === "terminal") {
           moveTo("terminalPage", "terminalPage");
         } else if (path === "apple") {
           moveTo("terminalPage", "appleStoreGamePage");
-          setInitGameData();
+          setInitGameData(); // 강화게임 데이터 초기화
         } else if (path === "reaction") {
           moveTo("terminalPage", "reactionPage");
-          setReactionInit();
+          setReactionInit(); // 반응속도 테스트 데이터 초기화
         } else if (path === "home") {
           moveTo("terminalPage", "home");
         }
@@ -86,11 +88,13 @@ const onKeyUpTerminalInput = () => {
         terminalWrapper.appendChild(newNoPathLog);
       }
     } else if (value === "clear") {
+      // PAST LOG 다 삭제
       const pastLogs = document.querySelectorAll(".past_log");
       for (let pastLog of pastLogs) {
         terminalWrapper.removeChild(pastLog);
       }
     } else if (value === "exit") {
+      // PAST LOG 다 삭제
       const pastLogs = document.querySelectorAll(".past_log");
       for (let pastLog of pastLogs) {
         terminalWrapper.removeChild(pastLog);
@@ -108,7 +112,7 @@ const onKeyUpTerminalInput = () => {
       terminalWrapper.appendChild(noCommandLog);
     }
 
-    // 새로운 터미널 input 만들기
+    // 새로운 터미널 input 만들기 (current_log를 다시 만들면서 끝!)
     const newCurrentLog = document.createElement("div");
     const thisIsMe = document.createElement("span");
     const newInput = document.createElement("input");

@@ -11,13 +11,13 @@ let currentGameData = { ...initGameData };
 // 아이템 별 정보
 const itemInfo = {
   appleWatch: {
-    title: "애플워치 > 아이폰",
-    className: "appleWatch",
-    success: 0.6,
-    degration: 0,
-    destruction: 0,
-    clickMoney: 10,
-    cost: 100,
+    title: "애플워치 > 아이폰", // 제목
+    className: "appleWatch", // 클래스명
+    success: 0.6, // 성공률
+    degration: 0, // 하락율
+    destruction: 0, // 파괴율
+    clickMoney: 10, // 클릭 당 코인
+    cost: 100, // 강화 비용
   },
   iPhone: {
     title: "아이폰 > 아이패드",
@@ -84,7 +84,7 @@ const setInitGameData = () => {
   currentGameData = { ...initGameData };
   currentMoney.innerHTML = initGameData.money;
   showInfo(currentGameData.item);
-  document.getElementById("enhance_result").innerHTML = "";
+  document.getElementById("enhance_result").innerHTML = ""; // 강화 성공!! 이런거 없애줌 (강화 결과 없앰)
 };
 
 // 돈 벌기 클릭
@@ -127,6 +127,7 @@ const showInfo = (item) => {
   document.getElementById("current_item").innerHTML = title;
   document.getElementById("cost").innerHTML = cost;
 
+  // 이미지를 위해 className 요리조리 바꾸기
   const itemImage = document.getElementById("item_image");
   for (let classItem of itemImage.classList) {
     if (classItem !== "item_image") {
@@ -190,8 +191,8 @@ const enhance = () => {
 
   // 확률따라 강화
   const currentItem = document.getElementById("current_item");
-  const randomNumber = Math.random();
-  const successRate = itemInfo[currentGameData.item].success;
+  const randomNumber = Math.random(); // 0 ~ 1 사이의 난수
+  const successRate = itemInfo[currentGameData.item].success; // 성공률
   if (randomNumber < successRate) {
     showResult("success", currentGameData.stage);
     currentGameData.stage += 1;
